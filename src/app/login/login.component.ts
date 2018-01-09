@@ -18,8 +18,10 @@ export class LoginComponent implements OnInit {
       .subscribe(
         (res:Response) =>{
           console.log(res.json().status);
-          if(status){
+          if(res.json().status){
             this.auth.setUserLoggedIn();
+            console.log('log'+this.auth.getUserLoggedIn());
+            this.router.navigate(['dashboard']);
           }
         }
       );

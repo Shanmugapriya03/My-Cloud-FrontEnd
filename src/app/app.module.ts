@@ -9,7 +9,6 @@ import { HeaderComponent } from './header/header.component';
 import { WelcomeComponent} from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { AuthGuard } from './auth/auth-guard.guard';
 import { AuthService } from './service/auth-service.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -30,10 +29,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
         {path : '' , component : WelcomeComponent},
         {path : 'login' , component : LoginComponent},
         {path : 'signup' , component : SignupComponent},
-        {path : 'dashboard', component : DashboardComponent,canActivate: [AuthGuard]}
+        {path : 'dashboard', component : DashboardComponent}
     ])
   ],
-  providers: [AuthService,AuthGuard],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

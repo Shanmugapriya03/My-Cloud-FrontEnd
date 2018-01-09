@@ -2,8 +2,9 @@
   <a class="navbar-brand" href="#">My Cloud</a>
 
   <div class="justify-content-between">
-      <button class="btn btn-outline-dark my-2 my-sm-0" type="button" routerLink="/login">Login</button>
-      <button class="btn btn-outline-dark my-2 my-sm-0" type="button" routerLink="/signup">Sign Up</button>
+      <button class="btn btn-outline-dark my-2 my-sm-0" *ngIf=!check type="button" routerLink="/login">Login</button>
+      <button class="btn btn-outline-dark my-2 my-sm-0" *ngIf=!check type="button" routerLink="/signup">Sign Up</button>
+      <button class="btn btn-outline-dark my-2 my-sm-0" *ngIf=check type="button" (click)=logout() routerLink="/">Logout</button>
   </div>
 
 </nav>

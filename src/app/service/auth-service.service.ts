@@ -11,7 +11,9 @@ export class AuthService {
   setUserLoggedIn(){
     this.isUserLoggedIn = true;
   }
-
+  unSetUserLoggedIn(){
+    return this.isUserLoggedIn = false;
+  }
   getUserLoggedIn(){
     return this.isUserLoggedIn;
   }
