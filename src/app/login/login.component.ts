@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http,Response } from '@angular/http';
+import { Router } from '@angular/router';
+import { AuthService } from '../service/auth-service.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,7 +9,7 @@ import { Http,Response } from '@angular/http';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http:Http) {
+  constructor(private http:Http,private auth:AuthService,private router: Router) {
   }
   username='';
   password='';
@@ -15,7 +17,10 @@ export class LoginComponent implements OnInit {
     this.http.get('http://localhost:8000/login?userName='+this.username+'&pass='+this.password)
       .subscribe(
         (res:Response) =>{
-          console.log(res.json())
+          console.log(res.json().status);
+          if(status){
+            this.auth.setUserLoggedIn();
+          }
         }
       );
   }
