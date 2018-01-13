@@ -14,18 +14,18 @@ export class SignupComponent implements OnInit {
   }
   username='';
   password='';
-
+  emptyUser:boolean=false;
+  emptyPass:boolean=false;
   signup(){
-    console.log('sign up');
-    /*this.http.post('http://localhost:8000/signup?userName='+this.username+'&pass='+this.password)
+    this.http.get('http://localhost:8000/signup?userName='+this.username+'&pass='+this.password)
       .subscribe(
         (res:Response) =>{
-          console.log(res.json().status);
-          if(status){
-            this.auth.setUserLoggedIn();
+          console.log(res.json());
+          if(res.json().status){
+            this.router.navigate(['login']);
           }
         }
-      );*/
+      );
   }
   ngOnInit() {
   }
