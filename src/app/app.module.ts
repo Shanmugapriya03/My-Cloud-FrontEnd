@@ -26,7 +26,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-        {path : '' , component : WelcomeComponent},
+        {path : '' , component : LoginComponent},
         {path : 'login' , component : LoginComponent},
         {path : 'signup' , component : SignupComponent},
         {path : 'dashboard', component : DashboardComponent}

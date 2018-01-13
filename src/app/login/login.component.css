@@ -1,8 +1,23 @@
 div.container{
     margin: 0;
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+ }
+ .main{
+   border: 1px solid white;
+   padding: 50px;
+   padding-bottom: 80px !important;
+ }
+ button,input{
+   border-radius: 0px !important;
+   border-color: white;
+   background-color: #2C6268 !important;
+   color: white !important;
+ }
+ ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+     color: white;
+     opacity: 1; /* Firefox */
  }
