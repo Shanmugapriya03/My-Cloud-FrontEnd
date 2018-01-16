@@ -1,8 +1,30 @@
 div.container{
     margin: 0;
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+ }
+ .main{
+   padding: 50px;
+   padding-bottom: 80px !important;
+ }
+ input{
+   border-radius: 0px !important;
+   border-top-style: hidden;
+   border-left-style: hidden;
+   border-right-style: hidden;
+ }
+ button{
+   border-radius: 0px;
+   border-color: black;
+   background-color: black;
+   line-height: 20px;
+   color: white;
+ }
+ button:hover{
+   cursor: pointer;
+   background-color:white ;
+   color: black;
  }

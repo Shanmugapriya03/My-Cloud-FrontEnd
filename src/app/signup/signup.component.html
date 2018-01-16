@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center align-items-center">
-      <div class="col-xs"></div>
-      <div class="col-xs-4">
+      <div class="col"></div>
+      <div class="col-5 main">
         <br/>
           <div class="input-group input-group-lg">
             <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username">
@@ -11,16 +11,12 @@
             <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
           </div>
         <br/>
-          <div class="row">
-            <div class="col"></div>
-            <div class="col-xs-2">
-              <div class="btn-group btn-group-lg" role="group">
-                <button type="button" class="btn btn-info" (click)=signup()>SignUp</button>
-              </div>
-            </div>
-            <div class="col"></div>
-        </div>
+          <div class="input-group input-group-lg">
+            <input type="password" class="form-control" placeholder="Confirm Password" [(ngModel)]="rpassword">
+          </div>
+          <br/><br/>
+            <button type="button" class="btn btn-lg btn-block" (click)=signup()>Sign up</button>
     </div>
-    <div class="col-xs"></div>
+    <div class="col"></div>
   </div>
 </div>
