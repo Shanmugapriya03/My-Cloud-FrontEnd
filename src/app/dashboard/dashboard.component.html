@@ -4,18 +4,18 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Name</th>
-              <th>Ip Address</th>
+              <th>Container Id</th>
+              <th>Image</th>
+              <th>Ports</th>
               <th>Created</th>
               <th>Status</th>
             </tr>
           </thead>
           <tbody>
-            <tr  *ngFor="let container of containers">
-              <td>logo</td>
-              <td>{{container.name}}</td>
-              <td>{{container.ip}}</td>
+            <tr  *ngFor="let container of data">
+              <td>{{container["container id"]}}</td>
+              <td>{{container.image}}</td>
+              <td>{{container.ports}}</td>
               <td>{{container.created}} ago</td>
               <td>{{container.status}}</td>
             </tr>
