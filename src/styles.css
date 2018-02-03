@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
-body{
-  font-family: Open Sans,sans-serif;
-  font-size: 13px;
-  line-height: 20px;
+body {
+    font-family: "proxima-nova", "proxima nova", "helvetica neue", "helvetica", "arial", sans-serif;
+    background: #1A4865;
+    padding: 0;
+    margin: 0;
 }

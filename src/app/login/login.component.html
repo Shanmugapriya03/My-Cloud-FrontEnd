@@ -1,18 +1,18 @@
-<div class="container">
-  <div class="row justify-content-center align-items-center">
-      <div class="col"></div>
-      <div class="col-5 main">
-        <br/>
-          <div class="input-group input-group-lg">
+<div class="login">
+      <div class="logo">
+        <h3><img src="/assets/cloud.png" alt="" height="35">
+        MyCloud</h3>
+      </div>
+      <div class="col-5 vertical-form sign-in">
+            <legend>Log In</legend>
             <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username">
-          </div>
-        <br/>
-          <div class="input-group input-group-lg">
             <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
-          </div>
-          <br/><br/>
-            <button type="button" class="btn btn-lg btn-block" (click)=login()>Login</button>
-    </div>
-    <div class="col"></div>
-  </div>
+            <button type="button" class="btn btn-lg btn-block" (click)=login()>Log In</button>
+            <p>Forgot Password?</p>
+      </div>
+      <div class="footer">
+        <p>Don't have an account?
+          <a routerLink="/signup">Sign Up</a>
+        </p>
+      </div>
 </div>

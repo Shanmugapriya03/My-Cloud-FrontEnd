@@ -1,10 +1,18 @@
-<nav class="navbar navbar-dark bg-dark justify-content-between">
-  <a class="navbar-brand" href="#" style="color:white;">My Cloud</a>
-
-  <div class="justify-content-between">
-      <button class="btn btn-outline-dark my-2 my-sm-0" *ngIf=!check type="button" routerLink="/login">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;
-      <button class="btn btn-outline-dark my-2 my-sm-0" *ngIf=!check type="button" routerLink="/signup">Sign up</button>
-      <button class="btn btn-outline-dark my-2 my-sm-0" *ngIf=check type="button" (click)=logout() routerLink="/">Logout</button>
+<div class="nav-bar">
+  <div class="nav_controls">
+    <div class="row">
+      <div class="columns small-9">
+        <div class="logo-wrapper">
+          <img class="logo" src="/assets/cloud-logo.png" alt="" height="35">
+        </div>
+            <a routerLink="/" class="navLink active">Containers</a>
+            <a routerLink="/" class="navLink">Spaces</a>
+            <a routerLink="/" class="navLink">Images</a>
+            <a routerLink="/" class="navLink">Networking</a>
+      </div>
+      <div class="columns small-3 stackRight">
+          <button type="button" class="btn btn-outline-secondary" *ngIf=check (click)=logout() routerLink="/">Logout</button>
+      </div>
+    </div>
   </div>
-
-</nav>
+</div>

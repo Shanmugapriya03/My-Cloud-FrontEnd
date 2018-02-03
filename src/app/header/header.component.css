@@ -1,12 +1,126 @@
-button{
-  color: white;
-  border-radius: 0px;
-  border-color: white;
-  width: 80px;
+.nav-bar {
+    width: 100%;
+    background: #fff;
+        background-color: rgb(255, 255, 255);
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-size: auto auto;
+    top: 0;
+    z-index: 11;
+    height: 100px;
 }
-button:hover{
-  border-color: black;
-  cursor: pointer;
-  color: black;
-  background-color: white;
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    display: block;
+}
+.nav_controls{
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  width: 1000px;
+}
+.row {
+    width: 100%;
+    max-width: 62.5rem;
+    margin: 0 auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: auto;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.columns {
+    position: relative;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    float: left;
+}
+.small-9 {
+    width: 75%;
+}
+.nav_controls .navLink {
+    display: block;
+    float: left;
+    color: #676767;
+    padding: 0;
+    border-bottom: 0;
+    position: relative;
+    line-height: 80px;
+    margin-right: 25px;
+    font-weight: 600;
+    font-style: normal;
+    padding: 0;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    border-bottom: 0;
+        border-bottom-width: 0px;
+        border-bottom-style: none;
+        border-bottom-color: currentcolor;
+    position: relative;
+}
+.nav_controls .navLink:first-of-type{
+    margin-left: 25px;
+}
+.nav_controls .navLink:focus, .nav_controls .navLink:hover{
+    outline: 0;
+    outline-width: 0px;
+    outline-style: none;
+    outline-color: currentcolor;
+    color: #1A4865;
+    text-decoration: underline;
+}
+.nav_controls .logo-wrapper{
+  margin-top: 24px;
+  width: 50px;
+  height: 30px;
+  display: block;
+  float: left;
+  border: 0;
+  position: relative;
+}
+.nav_controls .Logo{
+    margin-top: 24px;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    display: block;
+    float: left;
+    border: 0;
+    position: relative;
+}
+a {
+    color: #1A4865;
+    padding-bottom: 1px;
+    text-decoration:none;
+    text-decoration-color: currentcolor;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+a:hover {
+    cursor: pointer;
+}
+.nav_controls .navLink.active, .nav_controls .navLink.active:focus{
+    color: #1A4865;
+}
+[class*="column"] + [class*="column"]:last-child {
+    float: right;
+}
+.small-3 {
+    width: 25%;
+}
+.small-3 button{
+  margin-top: 25px;
+  float: right;
 }
