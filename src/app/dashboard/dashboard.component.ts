@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit {
   containers=[];
   data=[];
   constructor(private http:Http) {
-    
+
   }
   ngOnInit() {
     this.http.get('http://localhost:8000/dashboard')

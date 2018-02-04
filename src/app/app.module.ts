@@ -10,6 +10,8 @@ import { WelcomeComponent} from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AuthService } from './service/auth-service.service';
+import { SessionService } from './service/session.service';
+import { AuthGuard } from './guard/auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
@@ -29,10 +31,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
         {path : '' , component : LoginComponent},
         {path : 'login' , component : LoginComponent},
         {path : 'signup' , component : SignupComponent},
-        {path : 'dashboard', component : DashboardComponent}
+        {path : 'dashboard', component : DashboardComponent, canActivate : [AuthGuard]}
     ])
   ],
-  providers: [AuthService],
+  providers: [AuthService,SessionService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

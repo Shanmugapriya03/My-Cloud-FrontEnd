@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http,Response } from '@angular/http';
 import { Router } from '@angular/router';
 import { AuthService } from '../service/auth-service.service';
+import { SessionService } from '../service/session.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,7 +10,7 @@ import { AuthService } from '../service/auth-service.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http:Http,private auth:AuthService,private router: Router) {
+  constructor(private http:Http,private auth:AuthService,private router: Router,private session:SessionService) {
   }
   username='';
   password='';
@@ -20,6 +21,7 @@ export class LoginComponent implements OnInit {
           console.log(res.json().status);
           if(res.json().status){
             this.auth.setUserLoggedIn();
+            this.session.setSessionUser(this.username);
             console.log('log'+this.auth.getUserLoggedIn());
             this.router.navigate(['dashboard']);
           }
