@@ -1,18 +1,65 @@
 <div class="nav-bar">
-  <div class="nav_controls">
-    <div class="row">
-      <div class="columns small-9">
-        <div class="logo-wrapper">
-          <img class="logo" src="/assets/cloud-logo.png" alt="" height="35">
+    <div class="nav_controls">
+      <div class="row">
+        <div class="columns small-9">
+          <div class="logo-wrapper">
+            <img class="logo" src="/assets/cloud-logo.png" alt="" height="35">
+          </div>
+              <a routerLink="/dashboard/containers" class="navLink active">Containers</a>
+              <a routerLink="/" class="navLink">Spaces</a>
+              <a routerLink="/" class="navLink">Images</a>
+              <a routerLink="/" class="navLink">Networking</a>
         </div>
-            <a routerLink="/" class="navLink active">Containers</a>
-            <a routerLink="/" class="navLink">Spaces</a>
-            <a routerLink="/" class="navLink">Images</a>
-            <a routerLink="/" class="navLink">Networking</a>
-      </div>
-      <div class="columns small-3 stackRight">
-          <button type="button" class="btn btn-outline-secondary" *ngIf=check (click)=logout() routerLink="/">Logout</button>
+        <div class="columns small-3 stackRight">
+            <button type="button" class="btn btn-outline-secondary" *ngIf=check (click)=logout() routerLink="/">Logout</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <!--div class="dashoard_body">
+    <div class="row">
+      <div class="small-12 columns">
+        <h1>Containers</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <table class="table">
+          <thead class="table-header">
+            <tr>
+              <th>Container Id</th>
+              <th>Ip Address</th>
+              <th>Created At</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Otto</td>
+              </tr>
+              <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@TwBootstrap</td>
+                <td>Otto</td>
+              </tr>
+              <tr>
+                <td>Jacob</td>
+                <td>Otto</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td>Mark</td>
+                <td>@TwBootstrap</td>
+                <td>@twitter</td>
+                <td>Otto</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div-->

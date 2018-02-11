@@ -1,0 +1,42 @@
+<div class="common">
+  <header></header>
+  <div class="dashoard_body">
+    <div class="row">
+      <div class="Alert-box">
+        <div class="Alert-content">
+          <p>
+            <strong>Create Containers </strong> using given set of Images
+            <button type="button" class="btn create-button" routerLink="/">Create Container</button>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <h1>Containers</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <table class="table">
+          <thead class="table-header">
+            <tr>
+              <th>Container Id</th>
+              <th>Ip Address</th>
+              <th>Created At</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr  *ngFor="let container of data">
+                <td>{{container.Config['Hostname']}}</td>
+                <td>{{container.NetworkSettings['IPAddress']}}</td>
+                <td>{{value}} ago</td>
+                <td>{{container.State['Status']}}</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

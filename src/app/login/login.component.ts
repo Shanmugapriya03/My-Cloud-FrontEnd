@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
             this.auth.setUserLoggedIn();
             this.session.setSessionUser(this.username);
             console.log('log'+this.auth.getUserLoggedIn());
-            this.router.navigate(['dashboard']);
+            this.router.navigate(['dashboard/containers']);
           }
         }
       );

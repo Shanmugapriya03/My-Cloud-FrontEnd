@@ -13,6 +13,7 @@ import { AuthService } from './service/auth-service.service';
 import { SessionService } from './service/session.service';
 import { AuthGuard } from './guard/auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ContainersComponent } from './dashboard/containers/containers.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     WelcomeComponent,
     LoginComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    ContainersComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
         {path : '' , component : LoginComponent},
         {path : 'login' , component : LoginComponent},
         {path : 'signup' , component : SignupComponent},
-        {path : 'dashboard', component : DashboardComponent, canActivate : [AuthGuard]}
+        {path : 'dashboard', component : DashboardComponent, canActivate : [AuthGuard],
+        children: [{
+          path: 'containers',
+          component: ContainersComponent
+        }]
+        }
     ])
   ],
   providers: [AuthService,SessionService,AuthGuard],
