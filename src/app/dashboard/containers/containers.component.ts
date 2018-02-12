@@ -10,7 +10,6 @@ import { Http,Response } from '@angular/http';
 })
 export class ContainersComponent implements OnInit {
 
-    containers=[];
     data=[];
     value:any;
   constructor(private http:Http) {
@@ -21,24 +20,6 @@ export class ContainersComponent implements OnInit {
         .subscribe(
           (res:Response)=> {
             this.data=res.json();
-            // to retrive created time
-            for(var con of this.data){
-              var date = new Date();
-              var conDate = new Date(con.Created);
-              if(date.getDate()-conDate.getDate() != 0){
-                this.value = date.getDate()-conDate.getDate();
-                this.value +=" days";
-              }else if(date.getHours()-conDate.getHours() !=0){
-                this.value = date.getHours()-conDate.getHours();
-                this.value +=" hours";
-              }else if(date.getMinutes()-conDate.getMinutes() !=0){
-                this.value = date.getMinutes()-conDate.getMinutes();
-                this.value +=" minutes";
-              }else{
-                this.value = date.getSeconds()-conDate.getSeconds();
-                this.value +=" seconds";
-              }
-            }
           }
         );
   }

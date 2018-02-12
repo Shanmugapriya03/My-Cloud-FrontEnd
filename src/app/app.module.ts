@@ -14,6 +14,7 @@ import { SessionService } from './service/session.service';
 import { AuthGuard } from './guard/auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContainersComponent } from './dashboard/containers/containers.component';
+import { CreateContainerComponent } from './dashboard/create-container/create-container.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ContainersComponent } from './dashboard/containers/containers.component
     LoginComponent,
     SignupComponent,
     DashboardComponent,
-    ContainersComponent
+    ContainersComponent,
+    CreateContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,9 @@ import { ContainersComponent } from './dashboard/containers/containers.component
         children: [{
           path: 'containers',
           component: ContainersComponent
+        },{
+          path: 'createContainer',
+          component: CreateContainerComponent
         }]
         }
     ])
