@@ -5,10 +5,10 @@
           <div class="logo-wrapper">
             <img class="logo" src="/assets/cloud-logo.png" alt="" height="35">
           </div>
-              <a routerLink="/dashboard/containers" class="navLink active">Containers</a>
-              <a routerLink="/" class="navLink">Spaces</a>
-              <a routerLink="/" class="navLink">Images</a>
-              <a routerLink="/" class="navLink">Networking</a>
+              <a routerLink="/dashboard/containers" class="navLink">Containers</a>
+              <a routerLink="/dashboard/spaces" class="navLink">Spaces</a>
+              <a routerLink="/dashboard/images" class="navLink">Images</a>
+              <a routerLink="/dashboard/networking" class="navLink">Networking</a>
         </div>
         <div class="columns small-3 stackRight">
             <button type="button" class="btn btn-outline-secondary" *ngIf=check (click)=logout() routerLink="/">Logout</button>

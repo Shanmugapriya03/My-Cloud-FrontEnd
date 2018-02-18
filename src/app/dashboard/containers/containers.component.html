@@ -6,7 +6,7 @@
         <div class="Alert-content">
           <p>
             <strong>Create Containers </strong> using given set of Images
-            <button type="button" class="btn create-button" routerLink="/dashboard/createContainer">Create Container</button>
+            <button type="button" class="btn create-button" routerLink="/dashboard/create">Create Container</button>
           </p>
         </div>
       </div>
@@ -22,6 +22,7 @@
           <thead class="table-header">
             <tr>
               <th>Container Id</th>
+              <th>Container Name</th>
               <th>Ip Address</th>
               <th>Created At</th>
               <th>Status</th>
@@ -30,6 +31,7 @@
           <tbody>
               <tr *ngFor="let container of data">
                 <td>{{container["container id"]}}</td>
+                <td>{{container.names}}</td>
                 <td>{{container.ports}}</td>
                 <td>{{container.created}}</td>
                 <td>{{container.status}}</td>

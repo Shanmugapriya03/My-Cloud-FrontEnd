@@ -20,6 +20,7 @@ export class ContainersComponent implements OnInit {
         .subscribe(
           (res:Response)=> {
             this.data=res.json();
+            //console.log(this.data);
           }
         );
   }

@@ -27,6 +27,13 @@
 .row h2{
   margin-bottom: 1.5rem;
 }
+.row input{
+  margin-top: 1.5rem;
+}
+.info{
+  color: blue;
+  font-size: 15px;
+}
 [class*="block-grid-"] {
     display: block;
     padding: 0;
@@ -57,20 +64,21 @@ ul{
     border: 1px solid #dfdfdf;
     box-sizing: border-box;
 }
-.btn{
-    cursor: pointer;
-    background-color: #1A4865;
-    border-color: #1A4865;
-    color: white;
-}
-.btn :hover{
-    cursor: pointer;
+.img-btn{
     background-color: white;
     border-color: #1A4865;
     color: #1A4865;
+}
+.img :hover{
+    background-color: #1A4865;
+    border-color: #1A4865;
+    color: white;
 }
 .img-name{
   font-size: 16px;
   display: block;
   margin: 4px 0 10px;
+}
+button{
+  cursor: pointer;;
 }

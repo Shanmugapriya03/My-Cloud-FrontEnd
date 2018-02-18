@@ -40,7 +40,7 @@ import { CreateContainerComponent } from './dashboard/create-container/create-co
           path: 'containers',
           component: ContainersComponent
         },{
-          path: 'createContainer',
+          path: 'create',
           component: CreateContainerComponent
         }]
         }

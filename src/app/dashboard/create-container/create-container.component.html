@@ -10,35 +10,23 @@
       <div class="small-12 columns">
         <h2>Choose an image</h2>
         <ul class="small-block-grid-6">
-          <li>
+          <li *ngFor="let image of data">
             <div class="img">
-              <button class="btn btn-lg btn-block">
-                <span class="img-name">Ubuntu</span>
-              </button>
-            </div>
-          </li>
-          <li>
-            <div class="img">
-              <button class="btn btn-lg btn-block">
-                <span class="img-name">Debian</span>
-              </button>
-            </div>
-          </li>
-          <li>
-            <div class="img">
-              <button class="btn btn-lg btn-block">
-                <span class="img-name">Fedora</span>
-              </button>
-            </div>
-          </li>
-          <li>
-            <div class="img">
-              <button class="btn btn-lg btn-block">
-                <span class="img-name">Centos</span>
+              <button class="btn btn-lg btn-block img-btn"  (click)=selectImage(image)>
+                <span class="img-name">{{image.repository}}</span>
               </button>
             </div>
           </li>
         </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-9 columns">
+          <input type="text" class="form-control form-control-lg" placeholder="Choose a name for Container" [(ngModel)]="containerName">
+          <span class="info">(If left blank random name will be generated)</span>
+      </div>
+      <div class="small-3 columns">
+        <button type="button" class="btn btn-success btn-lg btn-block" (click)=createContainer()>Create Container</button>
       </div>
     </div>
   </div>
