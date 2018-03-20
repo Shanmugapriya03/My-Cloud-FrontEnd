@@ -15,6 +15,7 @@ import { AuthGuard } from './guard/auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContainersComponent } from './dashboard/containers/containers.component';
 import { CreateContainerComponent } from './dashboard/create-container/create-container.component';
+import { NetworkComponent } from './dashboard/network/network.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CreateContainerComponent } from './dashboard/create-container/create-co
     SignupComponent,
     DashboardComponent,
     ContainersComponent,
-    CreateContainerComponent
+    CreateContainerComponent,
+    NetworkComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,9 @@ import { CreateContainerComponent } from './dashboard/create-container/create-co
         },{
           path: 'create',
           component: CreateContainerComponent
+        },{
+          path: 'networking',
+          component: NetworkComponent
         }]
         }
     ])

@@ -1,2 +1,63 @@
-<header></header>
+<div class="common">
+  <header></header>
+  <div class="dashoard_body">
+    <div class="row">
+      <div class="small-12 columns">
+        <h1>Container Information</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <table class="table">
+          <thead class="table-header">
+            <tr>
+              <th>No Of Containers</th>
+              <th>Running</th>
+              <th>Paused</th>
+              <th>Stopped</th>
+              <th>No of Images</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td>{{data["containers"]}}</td>
+                <td>{{data["running"]}}</td>
+                <td>{{data["paused"]}}</td>
+                <td>{{data["stopped"]}}</td>
+                <td>{{data["images"]}}</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="small-12 columns">
+        <h1>System Information</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <table class="table">
+          <thead class="table-header">
+            <tr>
+              <th>Kernel Version</th>
+              <th>Operating System</th>
+              <th>Os Type</th>
+              <th>Architecture</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td>{{data["kernel_version"]}}</td>
+                <td>{{data["operating_system"]}}</td>
+                <td>{{data["os_type"]}}</td>
+                <td>{{data["architecture"]}}</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 <router-outlet><router-outlet>

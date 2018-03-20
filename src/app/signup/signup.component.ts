@@ -25,9 +25,14 @@ export class SignupComponent implements OnInit {
       this.http.get('http://localhost:8000/signup?userName='+this.username+'&pass='+this.password)
         .subscribe(
           (res:Response) =>{
-            console.log(res.json());
+            //console.log(res.json());
+            alert(res.json().message);
             if(res.json().status){
               this.router.navigate(['login']);
+            }else{
+              this.username="";
+              this.password="";
+              this.rpassword="";
             }
           }
         );

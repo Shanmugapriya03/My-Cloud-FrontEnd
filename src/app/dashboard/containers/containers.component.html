@@ -23,18 +23,25 @@
             <tr>
               <th>Container Id</th>
               <th>Container Name</th>
-              <th>Ip Address</th>
+              <th>Image</th>
               <th>Created At</th>
               <th>Status</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
               <tr *ngFor="let container of data">
                 <td>{{container["container id"]}}</td>
                 <td>{{container.names}}</td>
-                <td>{{container.ports}}</td>
+                <td>{{container.image}}</td>
                 <td>{{container.created}}</td>
                 <td>{{container.status}}</td>
+                <td>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-outline-success" (click)=startContainer(container)>Start</button>
+                    <button type="button" class="btn btn-outline-danger" (click)=stopContainer(container)>Stop</button>
+                  </div>
+                </td>
               </tr>
           </tbody>
         </table>

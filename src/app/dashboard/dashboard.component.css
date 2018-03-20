@@ -1,8 +1,26 @@
-/*div.container{
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
- }*/
+.row h1{
+  padding-top: 1.5rem;
+}
+ .table-header{
+   background: #FAFAFA !important;
+   color: black;
+ }
+ table {
+   table-layout: fixed;
+   width: 100%;
+   white-space: nowrap;
+   background-color: #FFFFFF;
+   text-align: center;
+ }
+ table td {
+   white-space: nowrap;
+   overflow: hidden;
+   height: 50px;
+   text-overflow: ellipsis;
+ }
+ table tr {
+       border:2px solid #F1F1F1;
+ }
+ table th{
+   height: 30px;
+ }

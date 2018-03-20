@@ -18,12 +18,16 @@ export class LoginComponent implements OnInit {
     this.http.get('http://localhost:8000/login?userName='+this.username+'&pass='+this.password)
       .subscribe(
         (res:Response) =>{
-          //console.log(res.json().status);
+          console.log(res.json());
+          alert(res.json().message);
           if(res.json().status){
             this.auth.setUserLoggedIn();
             this.session.setSessionUser(this.username);
             //console.log('log'+this.auth.getUserLoggedIn());
             this.router.navigate(['dashboard']);
+          }else{
+            this.username="";
+            this.password="";
           }
         }
       );
