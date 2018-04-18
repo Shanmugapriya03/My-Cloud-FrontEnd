@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http,Response } from '@angular/http';
 import { SessionService } from '../../service/session.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-containers',
@@ -16,14 +17,17 @@ export class ContainersComponent implements OnInit {
     value:any;
     userN="";
     containerIds=[];
-  constructor(private http:Http,private session:SessionService) {
+  constructor(private http:Http,private router: Router,private session:SessionService) {
   }
   startContainer(container){
     //console.log('start '+container["container id"]);
     this.http.get('http://localhost:8000/dashboard/containers/start?id='+container["container id"])
       .subscribe(
         (res:Response)=>{
-          console.log(res.json());
+          if(res.json().status){
+            alert('CONTAINER STARTED');
+            this.router.navigate(['dashboard/networking']);
+          }
         }
       );
   }
@@ -32,7 +36,10 @@ export class ContainersComponent implements OnInit {
     this.http.get('http://localhost:8000/dashboard/containers/stop?id='+container["container id"])
       .subscribe(
         (res:Response)=>{
-          console.log(res.json());
+          if(res.json().status){
+            alert('CONTAINER STOPPED');
+            this.router.navigate(['dashboard/networking']);
+          }
         }
       );
   }
@@ -43,14 +50,12 @@ export class ContainersComponent implements OnInit {
           (res:Response)=> {
             this.Data=res.json().data;
             this.containerIds = res.json().containerIds;
-            console.log(this.Data);
-            console.log(this.containerIds);
+            //console.log(this.Data);
+            //console.log(this.containerIds);
             for(var j=0;j<this.containerIds.length;j++){
-              //console.log(typeof(id.cId));
               for(var i=0;i<this.Data.length;i++){
-                //console.log(typeof(d["container id"]));
                 if(parseInt(this.containerIds[j].cId) === parseInt(this.Data[i]["container id"])){
-                  console.log(this.containerIds[j].cId+' '+this.Data[i]["container id"]);
+                  //console.log(this.containerIds[j].cId+' '+this.Data[i]["container id"]);
                   this.data.push(this.Data[i]);
                 }
               }

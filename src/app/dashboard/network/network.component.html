@@ -12,11 +12,26 @@
         <table class="table">
           <thead class="table-header">
             <tr>
-
+              <th>Container Id</th>
+              <th>Container Name</th>
+              <th>Status</th>
+              <th>PId</th>
+              <th>IP Address</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
-              
+            <tr *ngFor="let info of data">
+              <td>{{info.Id}}</td>
+              <td>{{info.Name}}</td>
+              <td>{{info.State.Status}}</td>
+              <td>{{info.State.Pid}}</td>
+              <div *ngIf="info.NetworkSettings.IPAddress; else elseBlock">{{info.NetworkSettings.IPAddress}}</div>
+              <ng-template #elseBlock>Start the Container</ng-template>
+              <td>
+                  <button type="button" class="btn btn-outline-danger" (click)=delContainer(info.Id)>Delete</button>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
